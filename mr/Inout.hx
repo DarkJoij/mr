@@ -93,9 +93,4 @@ final class Argv {
     public function flagProvided(flag: String): Bool {
         return flags.contains(flag);
     }
-
-    @:deprecated
-    public function toString(): String {
-        return 'ref: $ref\ncommand: $command\nother: $other\nflags: $flags';
-    }
 }

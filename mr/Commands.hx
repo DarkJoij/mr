@@ -19,7 +19,7 @@ private final class Checks {
 
     public static function isValidCommandNameLength(alias: String): Void {
         if (alias.length > 25) {
-            Default.printError('Alias name $alias is too long. Try to choose a shorter name.');
+            Default.printError('Alias name "$alias" is too long. Try to choose a shorter name.');
         }
     }
 }
@@ -49,6 +49,7 @@ private class Commands {
 
         var alias = argv.other[0];
         var command = argv.other[1];
+        Checks.isValidCommandNameLength(alias);
 
         var data = FileTools.readFile();
         Reflect.setField(data, alias, command);
@@ -95,6 +96,7 @@ private class Commands {
 
         var data = FileTools.readFile();
         var spaces = new RepeatableString(" ") * 20;
+
         Sys.println('Aliases$spaces | Commands');
 
         for (alias in Reflect.fields(data)) {

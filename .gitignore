@@ -3,3 +3,16 @@
 
 # Files:
 NEW_README.md
+
+# Lists:
+/installers/win64/**
+/installers/linux64/**
+
+# Except:
+!/installers/win64/install.bat
+!/installers/win64/multirun.exe
+!/installers/win64/uninstall.bat
+
+# !/installers/linux64/install.sh
+# !/installers/linux64/multirun
+# !/installers/linux64/uninstall.sh

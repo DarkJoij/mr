@@ -9,16 +9,15 @@ import mr.Inout.Default;
 final class FileTools {
     public static function createFile(): Void {
         var buffer = File.write(Default.fileName, false);
-        File.saveContent(Default.fileName, "{}");
         buffer.close();
 
+        File.saveContent(Default.fileName, "{}");
         Sys.println('Successfully created new ${Default.fileName} in ${Sys.getCwd()}.');
     }
 
     public static function readFile(): Dynamic {
         var content = File.getContent(Default.fileName);
-        var parsed = Json.parse(content);
-        return parsed;
+        return Json.parse(content);
     }
 
     public static function writeFile(data: Dynamic): Void {
