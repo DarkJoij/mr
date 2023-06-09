@@ -1,5 +1,6 @@
 # Folders:
 /dist
+/installers/linux_installer
 
 # Files:
 NEW_README.md
@@ -9,10 +10,9 @@ NEW_README.md
 /installers/linux64/**
 
 # Except:
+!/installers/LinuxInstaller.hx
 !/installers/win64/install.bat
 !/installers/win64/multirun.exe
 !/installers/win64/uninstall.bat
-
-# !/installers/linux64/install.sh
-# !/installers/linux64/multirun
-# !/installers/linux64/uninstall.sh
+!/installers/linux64/multirun
+!/installers/linux64/multirun-linux64-compiled.tar.xz

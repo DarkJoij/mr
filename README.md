@@ -2,6 +2,14 @@
 Lightweight application to simplify working with long console commands.
 
 # Installition
+### Quick installition
+##### Windows
+Just run the [executable](installers/win64/multirun.exe) and follow instructions.
+
+##### Linux
+Download the [archive](installers/linux64/multirun-linux64-compiled.tar.xz), extract any place you want and run the `multirun` file using your terminal.
+
+##### Other
 Look for installer for your system in [installers folder](installers).
 
 # Running 

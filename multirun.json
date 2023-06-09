@@ -1,3 +1,5 @@
 {
-	"build": "haxe -main mr/Main.hx -cpp dist"
+	"build": "haxe -main mr/Main.hx -cpp dist",
+    "test_linux": "cd installers && haxe -main LinuxInstaller.hx --interp",
+    "make_linux": "cd installers && haxe -main LinuxInstaller.hx -cpp linux_installer"
 }
