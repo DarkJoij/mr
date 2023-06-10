@@ -2,9 +2,6 @@
 /dist
 /installers/linux_installer
 
-# Files:
-NEW_README.md
-
 # Lists:
 /installers/win64/**
 /installers/linux64/**
@@ -15,4 +12,4 @@ NEW_README.md
 !/installers/win64/multirun.exe
 !/installers/win64/uninstall.bat
 !/installers/linux64/multirun
-!/installers/linux64/multirun-linux64-compiled.tar.xz
+!/installers/linux64/multirun-linux64.tar.xz

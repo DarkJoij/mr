@@ -2,14 +2,53 @@
 Lightweight application to simplify working with long console commands.
 
 # Installition
-### Quick installition
-##### Windows
+## Quick installition
+#### Windows
 Just run the [executable](installers/win64/multirun.exe) and follow instructions.
 
-##### Linux
-Download the [archive](installers/linux64/multirun-linux64-compiled.tar.xz), extract any place you want and run the `multirun` file using your terminal.
+#### Linux
+Download the [archive](installers/linux64/multirun-linux64-compiled.tar.xz), extract any place you want and run the `multirun` (Not `mr`!) file using your terminal.
 
-##### Other
+## Building from source
+To build Multirun, you need the installed [Haxe Language compiler](https://haxe.org/download/) and the [`hxcpp library`](https://lib.haxe.org/p/hxcpp).
+
+###### Note: In my case, I used C++ (`hxcpp`) to build executables, but you can also use any available target of the Haxe compiler to get executable files. 
+
+* 1. Install the `hxcpp library` using the following command:
+```bat
+$ haxelib install hxcpp
+```
+
+* 2. Clone repository any place you want and enter the folder:
+```bat
+$ git clone https://github.com/DarkJoij/mr
+...
+
+$ cd mr
+```
+
+* 3. Build the [`Main`](mr/Main.hx) class into executable:
+```bat
+$ haxe -main mr/Main.hx -cpp dist
+```
+
+After compilation, the executable will be located in the `dist` folder under the name `Main`.
+
+#### Building [Linux installer](installers/LinuxInstaller.hx)
+###### Note: This step is optional and can be skipped if you know what to do with the executable file.
+
+To build the Linux installer, run the following commands:
+```bat
+$ cd installers
+$ haxe -main LinuxInstaller.hx -cpp linux_installer
+```
+
+After compilation, the executable will be located in the `linux_installer` folder under the name `LinuxInstaller`.
+
+#### Important! 
+For correct installation, it is **NECESSARY** that the Linux installer and the executable are in the same folder! If all the conditions are met, just run the installer and Multirun will be installed on your PC.
+
+## Other 
 Look for installer for your system in [installers folder](installers).
 
 # Running 

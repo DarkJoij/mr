@@ -6,14 +6,12 @@ private final class Linux {
     public static final workingDirectory: String = processBashCommand("echo \"$PWD\"");
     public static final userName: String = processBashCommand("echo \"$USER\"");
 
-    public static function processBashCommand(command: String): String {
-        var process = new Process(command);
-
+    private static function processBashCommand(command: String): String {
         try {
-            var bytes = process.stdout.readLine();
-            return bytes.toString();
+            var process = new Process(command);
+            return process.stdout.readLine(); // Unsafe.
         } catch (exception) {
-            return 'Exception occured: ${exception.message}.';
+            return 'Exception occured: $exception.';
         }
     }
 }
@@ -44,7 +42,7 @@ final class LinuxInstaller {
             return Sys.println('Unknown exception occured: "$exception" at ${exception.stack}.');
         }
 
-        Sys.println("Installition complete. You can close this window.");
+        Sys.println("Installition complete. Press ENTER to exit.");
         stdin.readByte();
     }
 }
